@@ -5,7 +5,7 @@ from database import get_db, Base, engoige
 from sqlalchemy_utils import create_database, database_exists
 from database import DATABASE_URL
 from shemas import ClassSection, ClassSectionResponce
-
+from modles import ClassSection_modle
 
 if not database_exists(DATABASE_URL):
     create_database(DATABASE_URL)
@@ -38,8 +38,8 @@ def  get_class_sections(
     request: Request,
     db: Session = Depends(get_db)
 ):
-    return  db.query(ClassSection).all()
-    
+    return  db.query(ClassSection_modle).all()
+
   
 
 

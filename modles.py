@@ -2,7 +2,7 @@ from database import Base
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import Integer, String
 
-class ClassSection(Base):
+class ClassSection_modle(Base):
     __tablename__ = "class_sections"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
